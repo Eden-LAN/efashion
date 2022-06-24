@@ -16,4 +16,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/items', 'ItemController@index');
+Route::resource('items', 'ItemsController', ['only' => ['index', 'show']]);
