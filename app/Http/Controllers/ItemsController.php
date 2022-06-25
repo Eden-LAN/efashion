@@ -16,7 +16,9 @@ class ItemsController extends Controller
     {
         //
         $items = Item::all();
-
+        // $image = DB::table('items', 'img') -> get();
+        // $imageData = base64_encode(file_get_contents($image));
+        // $src = 'data: '.mime_content_type($image).';base64,'.$imageData;
         return view('pages.index', compact('items'));
     }
 
