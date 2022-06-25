@@ -14,14 +14,30 @@
       <p><a href="">T-shirts and tops</a></p>
     </div>
   </div>
-  <!-- <div class="container">
-    @foreach ($items as $item)
-      <div class="card-index" style="background-image: url({{$item -> img}})">
-        <div class="index-info">
-          <p><?php echo rand(30, 150); ?></p>
-          <p>{{$item -> brand}}</p>
+
+  <div class="container">
+    <div class="category-list">
+      <p><a href="">Bikinis and swimsuits</a></p>
+      <p><a href="">Coats</a></p>
+      <p><a href="">Jackets and Suit Jackets</a></p>
+      <p><a href="">Jeans</a></p>
+      <p><a href="">Shirts</a></p>
+      <p><a href="">Shorts</a></p>
+      <p><a href="">Skirts</a></p>
+      <p><a href="">Trousers</a></p>
+      <p><a href="">T-shirts and tops</a></p>
+    </div>
+
+    <div class="images">
+      @foreach ($items as $item)
+        <div class="card-index">
+        <img src="item:img/jpeg;base64,{{ chunk_split(base64_encode($item->pic)) }}" alt="image">
+          <div class="index-info">
+            <p><?php echo rand(30, 150); ?>€</p>
+            <p>{{$item -> brand}}</p>
+          </div>
         </div>
-      </div>
-    @endforeach
-  </div> -->
+      @endforeach
+    </div>
+  </div>
 @endsection
