@@ -16,8 +16,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('items', 'ItemsController', ['only' => ['index', 'show']]);
-
+// Route::resource('items', 'ItemsController', ['only' => ['index', 'show']]);
+Route::get('/items', 'ItemsController@index');
+Route::get('/items/{id}', 'ItemsController@showItem');
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

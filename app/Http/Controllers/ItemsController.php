@@ -16,7 +16,10 @@ class ItemsController extends Controller
     {
         //
         $items = Item::all();
-        // $image = DB::table('items', 'img') -> get();
+        // $base64String = Item::find($items -> img);
+        // $decoder = base64_decode($base64String);
+        // $image = imagecreatefromstring(file_get_contents($decoder));
+        // $image = Item::find('img');
         // $imageData = base64_encode(file_get_contents($image));
         // $src = 'data: '.mime_content_type($image).';base64,'.$imageData;
         return view('pages.index', compact('items'));
@@ -52,10 +55,16 @@ class ItemsController extends Controller
     public function show(Item $item)
     {
         //
-        $item = Item::find($item->id);
+        $item = Item::findOrFail($item -> id);
         return view('pages.show', ['item' => $item]);
     }
 
+    public function showItem($id)
+    {
+        //
+        $item = Item::find($id);
+        return view('pages.show', ['item' => $item]);
+    }
     /**
      * Show the form for editing the specified resource.
      *

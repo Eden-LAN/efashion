@@ -31,7 +31,7 @@
     <div class="images">
       @foreach ($items as $item)
         <div class="card-index">
-        <img src="item:img/jpeg;base64,{{ chunk_split(base64_encode($item->pic)) }}" alt="image">
+      <a href="/items/{id}"><img src="{{$item -> img_url}}" alt="image"></a>
           <div class="index-info">
             <p><?php echo rand(30, 150); ?>€</p>
             <p>{{$item -> brand}}</p>

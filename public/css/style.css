@@ -86,6 +86,11 @@ html, body {
   color: white;
   font-size: 34px;
   font-weight: bold;
+  transition: transform .4s;
+}
+
+.card-category:hover {
+  transform: scale(1.05);
 }
 
 .context {
@@ -112,11 +117,6 @@ html, body {
 }
 
 /* navbar */
-.navbar {
-  display: flex;
-  justify-content: space-around;
-}
-
 .banner {
   width: 100%;
   height: 600px;
@@ -159,10 +159,26 @@ html, body {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto;
-  width: 100%;
+}
+
+.card-index {
+  width:300px;
+  height: 500px;
+}
+
+.card-index img {
+  width: 300px;
+  height: 250px;
+  object-fit: contain;
+  transition: transform .4s;
+}
+
+.card-index img:hover {
+  transform: scale(1.05) ;
 }
 
 .index-info {
   display: flex;
   justify-content: space-around;
+  margin-top: 15px;
 }

@@ -11,6 +11,6 @@ class Item extends Model
 
     protected $table = 'items';
     public $timestamps = false;
-    protected $primaryKey = 'id';
+    protected $primaryKey = 'img';
     protected $fillable = ['id','brand', 'color', 'gender', 'category', 'img'];
 }

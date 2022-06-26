@@ -20,15 +20,12 @@
     <body class="antialiased">
       <div class="home-container">
         <div class="navbar navbar-expand-lg navbar-light bg-light">
-          <a class="navbar-brand" href="#"><img src="/images/EFASHION.png" alt="logo"></a>
+          <img src="/images/EFASHION.png" alt="logo">
 
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item active">
                 <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Log out</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#"><i class="fa-solid fa-circle-user"></i></a>
